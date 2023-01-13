@@ -38,7 +38,7 @@ def Get(patentNum: str):
         .find_element(By.ID, "p00_searchBtn_btnDocInquiry") \
         .click()
 
-    sleep(0.5) #　読み込みに伴い、0.5秒スリープする
+    sleep(2.0) #　読み込みに伴い、0.5秒スリープする
 
     for i, num in enumerate(str.split(patentNum, " ")):
 
@@ -62,7 +62,7 @@ def Get(patentNum: str):
                 .click()
         )
 
-        sleep(0.5)
+        sleep(2.0)
 
         # ファイルサイズが50kBを超えるか10秒経過するかしてから次のステップに進む
         t = time.time()
